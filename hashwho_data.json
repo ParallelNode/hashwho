@@ -1,0 +1,1282 @@
+{
+  "types": {
+    "MD5": [
+      "0",
+      "raw-md5",
+      null
+    ],
+    "MD4": [
+      "900",
+      "raw-md4",
+      null
+    ],
+    "MD2": [
+      null,
+      null,
+      null
+    ],
+    "NTLM (NT hash)": [
+      "1000",
+      "nt",
+      "Windows NT hash"
+    ],
+    "LM": [
+      "3000",
+      "lm",
+      "uppercased, <=14 chars, often split A:B"
+    ],
+    "SHA1": [
+      "100",
+      "raw-sha1",
+      null
+    ],
+    "SHA-224": [
+      "1300",
+      "raw-sha224",
+      null
+    ],
+    "SHA-256": [
+      "1400",
+      "raw-sha256",
+      null
+    ],
+    "SHA-384": [
+      "10800",
+      "raw-sha384",
+      null
+    ],
+    "SHA-512": [
+      "1700",
+      "raw-sha512",
+      null
+    ],
+    "SHA3-256 / Keccak-256": [
+      "17400",
+      "raw-keccak-256",
+      null
+    ],
+    "SHA3-512 / Keccak-512": [
+      "17600",
+      "raw-keccak",
+      null
+    ],
+    "RIPEMD-160": [
+      "6000",
+      "ripemd-160",
+      null
+    ],
+    "Whirlpool": [
+      "6100",
+      "whirlpool",
+      null
+    ],
+    "BLAKE2b-512": [
+      "600",
+      "raw-blake2",
+      null
+    ],
+    "CRC32": [
+      "11500",
+      null,
+      "8 hex, needs :00000000 salt in hashcat"
+    ],
+    "GOST R 34.11-94": [
+      "6900",
+      "gost",
+      null
+    ],
+    "MySQL323 (pre-4.1)": [
+      "200",
+      "mysql",
+      "16 hex"
+    ],
+    "MySQL 4.1+/5 (SHA1x2)": [
+      "300",
+      "mysql-sha1",
+      "leading *, 40 hex"
+    ],
+    "md5crypt ($1$)": [
+      "500",
+      "md5crypt",
+      "Cisco-IOS type 5 too"
+    ],
+    "bcrypt ($2*$)": [
+      "3200",
+      "bcrypt",
+      null
+    ],
+    "sha256crypt ($5$)": [
+      "7400",
+      "sha256crypt",
+      null
+    ],
+    "sha512crypt ($6$)": [
+      "1800",
+      "sha512crypt",
+      null
+    ],
+    "Apache apr1 ($apr1$)": [
+      "1600",
+      "md5crypt",
+      "Apache MD5"
+    ],
+    "descrypt (DES)": [
+      "1500",
+      "descrypt",
+      "13 chars, classic crypt(3)"
+    ],
+    "bsdicrypt (_...)": [
+      "12400",
+      "bsdicrypt",
+      null
+    ],
+    "phpass (WP/phpBB3)": [
+      "400",
+      "phpass",
+      "$P$ or $H$"
+    ],
+    "Drupal7 ($S$)": [
+      "7900",
+      "drupal7",
+      null
+    ],
+    "Django PBKDF2-SHA256": [
+      "10000",
+      "django",
+      "pbkdf2_sha256$"
+    ],
+    "Django SHA1": [
+      "124",
+      null,
+      "sha1$salt$hash"
+    ],
+    "Joomla (md5:salt)": [
+      "20",
+      "dynamic_1",
+      "md5($pass.$salt)"
+    ],
+    "vBulletin <3.8.5": [
+      "2611",
+      null,
+      "md5(md5($pass).$salt)"
+    ],
+    "vBulletin >=3.8.5": [
+      "2711",
+      null,
+      null
+    ],
+    "IPB / MyBB": [
+      "2811",
+      null,
+      null
+    ],
+    "LDAP {SSHA}": [
+      "111",
+      "ssha",
+      "salted SHA1, base64"
+    ],
+    "LDAP {SHA}": [
+      "101",
+      "raw-sha1",
+      "base64 SHA1"
+    ],
+    "LDAP {SMD5}": [
+      "110",
+      null,
+      "salted MD5, base64"
+    ],
+    "LDAP {MD5}": [
+      "90",
+      null,
+      "base64 MD5"
+    ],
+    "LDAP {SSHA256}": [
+      "1411",
+      null,
+      null
+    ],
+    "LDAP {SSHA512}": [
+      "1711",
+      null,
+      null
+    ],
+    "Cisco-IOS $8$ (PBKDF2)": [
+      "9200",
+      null,
+      null
+    ],
+    "Cisco-IOS $9$ (scrypt)": [
+      "9300",
+      null,
+      null
+    ],
+    "Cisco-ASA MD5": [
+      "2410",
+      "asa-md5",
+      null
+    ],
+    "Cisco type 7": [
+      null,
+      null,
+      "reversible XOR, decode not crack"
+    ],
+    "MSSQL 2000": [
+      "131",
+      "mssql",
+      null
+    ],
+    "MSSQL 2005": [
+      "132",
+      "mssql05",
+      null
+    ],
+    "MSSQL 2012/2014": [
+      "1731",
+      "mssql12",
+      "0x0200..."
+    ],
+    "Oracle 11g (SHA1)": [
+      "112",
+      "oracle11",
+      "S:... 60 hex"
+    ],
+    "Oracle 7-10g (DES)": [
+      "3100",
+      "oracle",
+      null
+    ],
+    "PostgreSQL md5": [
+      "12",
+      "postgres",
+      "md5 + username salt"
+    ],
+    "Kerberos 5 AS-REP (23)": [
+      "18200",
+      "krb5asrep",
+      "$krb5asrep$"
+    ],
+    "Kerberos 5 TGS-REP (23)": [
+      "13100",
+      "krb5tgs",
+      "$krb5tgs$"
+    ],
+    "Kerberos 5 AS-REQ PA": [
+      "7500",
+      "krb5pa-md5",
+      "$krb5pa$"
+    ],
+    "NetNTLMv1": [
+      "5500",
+      "netntlm",
+      null
+    ],
+    "NetNTLMv2": [
+      "5600",
+      "netntlmv2",
+      null
+    ],
+    "PBKDF2-HMAC-SHA1": [
+      "12000",
+      "pbkdf2-hmac-sha1",
+      null
+    ],
+    "PBKDF2-HMAC-SHA256": [
+      "10900",
+      "pbkdf2-hmac-sha256",
+      null
+    ],
+    "PBKDF2-HMAC-SHA512": [
+      "12100",
+      "pbkdf2-hmac-sha512",
+      null
+    ],
+    "scrypt": [
+      "8900",
+      "scrypt",
+      "$scrypt$ / SCRYPT:"
+    ],
+    "Argon2": [
+      null,
+      "argon2",
+      "hashcat: recent builds only ($argon2i/d/id$)"
+    ],
+    "WPA-PBKDF2/PMKID (22000)": [
+      "22000",
+      "wpapsk",
+      "hccapx / EAPOL / PMKID"
+    ],
+    "JWT (HS256/384/512)": [
+      "16500",
+      null,
+      "eyJ...  HMAC secret"
+    ],
+    "bitcoin/wallet.dat": [
+      "11300",
+      "bitcoin",
+      "$bitcoin$"
+    ],
+    "Adler-32": [
+      null,
+      null,
+      "checksum, not a password hash"
+    ],
+    "CRC64": [
+      null,
+      null,
+      "checksum, not a password hash"
+    ],
+    "RAdmin v2.x": [
+      "9900",
+      null,
+      "Radmin Server 2.x"
+    ],
+    "Tiger-160": [
+      null,
+      null,
+      "Tiger-192 truncated; no hashcat mode"
+    ],
+    "SHA3-224": [
+      "17300",
+      null,
+      null
+    ],
+    "SHA3-384": [
+      "17500",
+      null,
+      null
+    ],
+    "RIPEMD-256": [
+      null,
+      null,
+      "no hashcat mode"
+    ],
+    "BLAKE2s-256": [
+      null,
+      null,
+      "no hashcat mode (m 600 is BLAKE2b-512)"
+    ],
+    "yescrypt": [
+      null,
+      "yescrypt",
+      "modern Linux /etc/shadow default ($y$)"
+    ],
+    "gost-yescrypt": [
+      null,
+      "gost-yescrypt",
+      "$gy$"
+    ],
+    "Domain Cached Credentials (DCC/mscash)": [
+      "1100",
+      "mscash",
+      "M$user#hash"
+    ],
+    "Domain Cached Credentials 2 (DCC2/mscash2)": [
+      "2100",
+      "mscash2",
+      "$DCC2$rounds#user#hash"
+    ],
+    "NTLM ($NT$-wrapped)": [
+      "1000",
+      "nt",
+      "same hash as NTLM"
+    ],
+    "macOS 10.8+ ($ml$)": [
+      "7100",
+      "PBKDF2-HMAC-SHA512",
+      "$ml$rounds$salt$hash"
+    ],
+    "GRUB2 PBKDF2-SHA512": [
+      "7200",
+      "grub-pbkdf2-sha512",
+      "grub.pbkdf2.sha512..."
+    ],
+    "MD5 crypt (Sun / $md5$)": [
+      "3300",
+      "sunmd5",
+      "Solaris"
+    ],
+    "Atlassian {PKCS5S2}": [
+      "12001",
+      "PBKDF2-HMAC-SHA1",
+      "base64, PBKDF2-HMAC-SHA1"
+    ],
+    "7-Zip": [
+      "11600",
+      "7z",
+      "$7z$"
+    ],
+    "RAR3-hp": [
+      "12500",
+      "rar3",
+      "$RAR3$*0*"
+    ],
+    "RAR3-p": [
+      "23800",
+      "RAR3",
+      "$RAR3$*1*"
+    ],
+    "RAR5": [
+      "13000",
+      "rar5",
+      "$rar5$"
+    ],
+    "WinZip / AES-ZIP": [
+      "13600",
+      "ZIP",
+      "$zip2$"
+    ],
+    "KeePass 1/2": [
+      "13400",
+      "KeePass",
+      "$keepass$"
+    ],
+    "AxCrypt": [
+      "13200",
+      "axcrypt",
+      "$axcrypt$"
+    ],
+    "MS Office 2007-2013": [
+      "9400/9500/9600",
+      "office",
+      "9400=2007 9500=2010 9600=2013"
+    ],
+    "MS Office <=2003": [
+      "9700/9710/9720/9800",
+      "oldoffice",
+      "by RC4/MD5/SHA1 variant"
+    ],
+    "PDF (Acrobat)": [
+      "10400/10500/10600/10700",
+      "pdf",
+      "by PDF/crypto version"
+    ],
+    "Ethereum Wallet (PBKDF2)": [
+      "15600",
+      "ethereum-pbkdf2",
+      "$ethereum$p*"
+    ],
+    "Ethereum Wallet (scrypt)": [
+      "15700",
+      "ethereum-scrypt",
+      "$ethereum$s*"
+    ],
+    "Ethereum Pre-Sale Wallet": [
+      "16300",
+      "ethereum-presale",
+      "$ethereum$w*"
+    ],
+    "Electrum Wallet": [
+      "16600",
+      "electrum",
+      "$electrum$ ; exact mode by version"
+    ],
+    "Blockchain, My Wallet": [
+      "12700/15200",
+      "Blockchain",
+      "v2 -> 15200"
+    ],
+    "MetaMask": [
+      "26600",
+      "metamask",
+      "$metamask$"
+    ],
+    "BitLocker": [
+      "22100",
+      "bitlocker",
+      "$bitlocker$"
+    ],
+    "FileVault 2": [
+      "16700",
+      "FVDE",
+      "$fvde$"
+    ],
+    "LUKS": [
+      "14600",
+      "LUKS",
+      "$luks$"
+    ],
+    "Android Backup": [
+      "18900",
+      "androidbackup",
+      "$ab$"
+    ],
+    "iTunes Backup": [
+      "14700/14800",
+      "itunes-backup",
+      "iOS <=10.1 -> 14700, >=10.2 -> 14800"
+    ],
+    "DPAPI masterkey": [
+      "15300/15310",
+      "DPAPImk",
+      "$DPAPImk$1* / *2*"
+    ],
+    "RACF": [
+      "8500",
+      "racf",
+      "$racf$"
+    ],
+    "FileZilla Server": [
+      "15000",
+      null,
+      "$filezilla-server$"
+    ],
+    "PostgreSQL SCRAM-SHA-256": [
+      "28600",
+      null,
+      "$postgres$"
+    ],
+    "MongoDB SCRAM": [
+      "24100/24200",
+      "mongodb-scram",
+      "sha1 -> 24100, sha256 -> 24200"
+    ],
+    "EPiServer": [
+      "141/1441",
+      "episerver",
+      "1441 = sha256 variant"
+    ],
+    "SIP digest auth": [
+      "11400",
+      "SIP",
+      "$sip$*"
+    ],
+    "SSH private key": [
+      "22911",
+      "ssh",
+      "$sshng$ ; exact 22921-22951 by key type"
+    ],
+    "Kerberos 5 TGS-REP (17)": [
+      "19600",
+      "krb5tgs",
+      null
+    ],
+    "Kerberos 5 TGS-REP (18)": [
+      "19700",
+      "krb5tgs",
+      null
+    ],
+    "Kerberos 5 Pre-Auth (17)": [
+      "19800",
+      "krb5pa-sha1",
+      null
+    ],
+    "Kerberos 5 Pre-Auth (18)": [
+      "19900",
+      "krb5pa-sha1",
+      null
+    ]
+  },
+  "extra": {
+    "md5($pass.$salt) / md5($salt.$pass)": [
+      "10 / 20",
+      "dynamic_1",
+      "hashcat 10=md5(pass.salt) 20=md5(salt.pass)"
+    ],
+    "sha1($pass.$salt) / sha1($salt.$pass)": [
+      "110 / 120",
+      "dynamic",
+      null
+    ],
+    "sha256($pass.$salt) / sha256($salt.$pass)": [
+      "1410 / 1420",
+      "dynamic",
+      null
+    ],
+    "LM:NTLM pair (pwdump)": [
+      "3000 / 1000",
+      "lm / nt",
+      "split on ':', crack halves separately"
+    ],
+    "MD5 (base64)": [
+      null,
+      null,
+      "raw MD5 in base64; decode to hex then hashcat -m 0"
+    ],
+    "MD4 (base64)": [
+      null,
+      null,
+      "raw MD4 in base64; decode to hex then hashcat -m 900"
+    ],
+    "SHA1 (base64)": [
+      null,
+      null,
+      "raw SHA1 in base64; decode to hex then hashcat -m 100"
+    ],
+    "RIPEMD-160 (base64)": [
+      null,
+      null,
+      "decode to hex then hashcat -m 6000"
+    ],
+    "SHA-224 (base64)": [
+      null,
+      null,
+      "decode to hex then hashcat -m 1300"
+    ],
+    "SHA-256 (base64)": [
+      null,
+      null,
+      "decode to hex then hashcat -m 1400"
+    ],
+    "SHA-384 (base64)": [
+      null,
+      null,
+      "decode to hex then hashcat -m 10800"
+    ],
+    "SHA-512 (base64)": [
+      null,
+      null,
+      "decode to hex then hashcat -m 1700"
+    ],
+    "Whirlpool (base64)": [
+      null,
+      null,
+      "decode to hex then hashcat -m 6100"
+    ]
+  },
+  "structural": [
+    {
+      "pattern": "^\\$y\\$[./A-Za-z0-9]",
+      "names": [
+        "yescrypt"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$gy\\$",
+      "names": [
+        "gost-yescrypt"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$7\\$[./A-Za-z0-9]",
+      "names": [
+        "yescrypt"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^M\\$[^#]+#[a-f0-9]{32}$",
+      "names": [
+        "Domain Cached Credentials (DCC/mscash)"
+      ],
+      "gate": "M"
+    },
+    {
+      "pattern": "^\\$DCC2\\$\\d+#[^#]+#[a-f0-9]{32}$",
+      "names": [
+        "Domain Cached Credentials 2 (DCC2/mscash2)"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$NT\\$[a-f0-9]{32}$",
+      "names": [
+        "NTLM ($NT$-wrapped)"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$ml\\$\\d+\\$[a-f0-9]+\\$[a-f0-9]+$",
+      "names": [
+        "macOS 10.8+ ($ml$)"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^grub\\.pbkdf2\\.sha512\\.",
+      "names": [
+        "GRUB2 PBKDF2-SHA512"
+      ],
+      "gate": "g"
+    },
+    {
+      "pattern": "^\\$md5[,$]",
+      "names": [
+        "MD5 crypt (Sun / $md5$)"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\{PKCS5S2\\}",
+      "names": [
+        "Atlassian {PKCS5S2}"
+      ],
+      "gate": "{"
+    },
+    {
+      "pattern": "^\\$7z\\$",
+      "names": [
+        "7-Zip"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$RAR3\\$\\*0\\*",
+      "names": [
+        "RAR3-hp"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$RAR3\\$\\*1\\*",
+      "names": [
+        "RAR3-p"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$rar5\\$",
+      "names": [
+        "RAR5"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$zip2\\$",
+      "names": [
+        "WinZip / AES-ZIP"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$keepass\\$",
+      "names": [
+        "KeePass 1/2"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$axcrypt\\$",
+      "names": [
+        "AxCrypt"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$office\\$",
+      "names": [
+        "MS Office 2007-2013"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$oldoffice\\$",
+      "names": [
+        "MS Office <=2003"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$pdf\\$",
+      "names": [
+        "PDF (Acrobat)"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$ethereum\\$p",
+      "names": [
+        "Ethereum Wallet (PBKDF2)"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$ethereum\\$s",
+      "names": [
+        "Ethereum Wallet (scrypt)"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$ethereum\\$w",
+      "names": [
+        "Ethereum Pre-Sale Wallet"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$electrum\\$",
+      "names": [
+        "Electrum Wallet"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$blockchain\\$",
+      "names": [
+        "Blockchain, My Wallet"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$metamask\\$",
+      "names": [
+        "MetaMask"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$bitlocker\\$",
+      "names": [
+        "BitLocker"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$fvde\\$",
+      "names": [
+        "FileVault 2"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$luks\\$",
+      "names": [
+        "LUKS"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$ab\\$",
+      "names": [
+        "Android Backup"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$itunes_backup\\$",
+      "names": [
+        "iTunes Backup"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$DPAPImk\\$",
+      "names": [
+        "DPAPI masterkey"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$racf\\$",
+      "names": [
+        "RACF"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$filezilla-server\\$",
+      "names": [
+        "FileZilla Server"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$postgres\\$",
+      "names": [
+        "PostgreSQL SCRAM-SHA-256"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$mongodb-scram\\$",
+      "names": [
+        "MongoDB SCRAM"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$episerver\\$",
+      "names": [
+        "EPiServer"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$sip\\$",
+      "names": [
+        "SIP digest auth"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$sshng\\$",
+      "names": [
+        "SSH private key"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$krb5tgs\\$17\\$",
+      "names": [
+        "Kerberos 5 TGS-REP (17)"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$krb5tgs\\$18\\$",
+      "names": [
+        "Kerberos 5 TGS-REP (18)"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$krb5pa\\$17\\$",
+      "names": [
+        "Kerberos 5 Pre-Auth (17)"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$krb5pa\\$18\\$",
+      "names": [
+        "Kerberos 5 Pre-Auth (18)"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$2[abxy]?\\$\\d{2}\\$[./A-Za-z0-9]{53}$",
+      "names": [
+        "bcrypt ($2*$)"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$6\\$",
+      "names": [
+        "sha512crypt ($6$)"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$5\\$",
+      "names": [
+        "sha256crypt ($5$)"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$1\\$",
+      "names": [
+        "md5crypt ($1$)"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$apr1\\$",
+      "names": [
+        "Apache apr1 ($apr1$)"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$(P|H)\\$[./A-Za-z0-9]{31}$",
+      "names": [
+        "phpass (WP/phpBB3)"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$S\\$[./A-Za-z0-9]{52}$",
+      "names": [
+        "Drupal7 ($S$)"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$argon2(id|i|d)\\$",
+      "names": [
+        "Argon2"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$scrypt\\$",
+      "names": [
+        "scrypt"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^_[./A-Za-z0-9]{19}$",
+      "names": [
+        "bsdicrypt (_...)"
+      ],
+      "gate": "_"
+    },
+    {
+      "pattern": "^pbkdf2_sha256\\$\\d+\\$",
+      "names": [
+        "Django PBKDF2-SHA256"
+      ],
+      "gate": "p"
+    },
+    {
+      "pattern": "^sha1\\$[^$]+\\$[a-f0-9]{40}$",
+      "names": [
+        "Django SHA1"
+      ],
+      "gate": "s"
+    },
+    {
+      "pattern": "^\\$pbkdf2-sha256\\$",
+      "names": [
+        "PBKDF2-HMAC-SHA256"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$pbkdf2-sha512\\$",
+      "names": [
+        "PBKDF2-HMAC-SHA512"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$pbkdf2\\$",
+      "names": [
+        "PBKDF2-HMAC-SHA1"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$bitcoin\\$",
+      "names": [
+        "bitcoin/wallet.dat"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\{SSHA512\\}",
+      "names": [
+        "LDAP {SSHA512}"
+      ],
+      "gate": "{"
+    },
+    {
+      "pattern": "^\\{SSHA256\\}",
+      "names": [
+        "LDAP {SSHA256}"
+      ],
+      "gate": "{"
+    },
+    {
+      "pattern": "^\\{SSHA\\}",
+      "names": [
+        "LDAP {SSHA}"
+      ],
+      "gate": "{"
+    },
+    {
+      "pattern": "^\\{SHA\\}",
+      "names": [
+        "LDAP {SHA}"
+      ],
+      "gate": "{"
+    },
+    {
+      "pattern": "^\\{SMD5\\}",
+      "names": [
+        "LDAP {SMD5}"
+      ],
+      "gate": "{"
+    },
+    {
+      "pattern": "^\\{MD5\\}",
+      "names": [
+        "LDAP {MD5}"
+      ],
+      "gate": "{"
+    },
+    {
+      "pattern": "^\\$8\\$[./A-Za-z0-9]{14}\\$[./A-Za-z0-9]{43}$",
+      "names": [
+        "Cisco-IOS $8$ (PBKDF2)"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$9\\$[./A-Za-z0-9]{14}\\$[./A-Za-z0-9]{43}$",
+      "names": [
+        "Cisco-IOS $9$ (scrypt)"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$krb5tgs\\$",
+      "names": [
+        "Kerberos 5 TGS-REP (23)"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$krb5asrep\\$",
+      "names": [
+        "Kerberos 5 AS-REP (23)"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\$krb5pa\\$",
+      "names": [
+        "Kerberos 5 AS-REQ PA"
+      ],
+      "gate": "$"
+    },
+    {
+      "pattern": "^\\*[a-f0-9]{40}$",
+      "names": [
+        "MySQL 4.1+/5 (SHA1x2)"
+      ],
+      "gate": "*"
+    },
+    {
+      "pattern": "^0x0200[a-f0-9]{136}$",
+      "names": [
+        "MSSQL 2012/2014"
+      ],
+      "gate": "0"
+    },
+    {
+      "pattern": "^0x0100[a-f0-9]{88}$",
+      "names": [
+        "MSSQL 2005"
+      ],
+      "gate": "0"
+    },
+    {
+      "pattern": "^0x0100[a-f0-9]{48}$",
+      "names": [
+        "MSSQL 2000"
+      ],
+      "gate": "0"
+    },
+    {
+      "pattern": "^S:[A-F0-9]{60}$",
+      "names": [
+        "Oracle 11g (SHA1)"
+      ],
+      "gate": "S"
+    },
+    {
+      "pattern": "^eyJ[A-Za-z0-9_\\-]+\\.eyJ[A-Za-z0-9_\\-]+\\.[A-Za-z0-9_\\-]+$",
+      "names": [
+        "JWT (HS256/384/512)"
+      ],
+      "gate": "e"
+    },
+    {
+      "pattern": "^[^:]+::[^:]*:[a-f0-9]{48}:[a-f0-9]{48}:[a-f0-9]{16}$",
+      "names": [
+        "NetNTLMv1"
+      ],
+      "gate": null
+    },
+    {
+      "pattern": "^[^:]+::[^:]+:[a-f0-9]{16}:[a-f0-9]{32}:[a-f0-9]+$",
+      "names": [
+        "NetNTLMv2"
+      ],
+      "gate": null
+    }
+  ],
+  "salted": [
+    {
+      "pattern": "^[a-f0-9]{32}:[a-f0-9]{32}$",
+      "names": [
+        "LM:NTLM pair (pwdump)",
+        "md5($pass.$salt) / md5($salt.$pass)"
+      ]
+    },
+    {
+      "pattern": "^[a-f0-9]{32}:[^:\\s]{1,256}$",
+      "names": [
+        "md5($pass.$salt) / md5($salt.$pass)",
+        "Joomla (md5:salt)",
+        "vBulletin <3.8.5",
+        "IPB / MyBB"
+      ]
+    },
+    {
+      "pattern": "^[a-f0-9]{40}:[^:\\s]{1,256}$",
+      "names": [
+        "sha1($pass.$salt) / sha1($salt.$pass)"
+      ]
+    },
+    {
+      "pattern": "^[a-f0-9]{64}:[^:\\s]{1,256}$",
+      "names": [
+        "sha256($pass.$salt) / sha256($salt.$pass)"
+      ]
+    }
+  ],
+  "hex_buckets": {
+    "8": [
+      "CRC32",
+      "Adler-32"
+    ],
+    "16": [
+      "MySQL323 (pre-4.1)",
+      "CRC64"
+    ],
+    "32": [
+      "MD5",
+      "NTLM (NT hash)",
+      "MD4",
+      "LM",
+      "MD2",
+      "RAdmin v2.x"
+    ],
+    "40": [
+      "SHA1",
+      "RIPEMD-160",
+      "MySQL 4.1+/5 (SHA1x2)",
+      "Tiger-160"
+    ],
+    "56": [
+      "SHA-224",
+      "SHA3-224"
+    ],
+    "64": [
+      "SHA-256",
+      "SHA3-256 / Keccak-256",
+      "RIPEMD-256",
+      "GOST R 34.11-94",
+      "BLAKE2s-256"
+    ],
+    "96": [
+      "SHA-384",
+      "SHA3-384"
+    ],
+    "128": [
+      "SHA-512",
+      "SHA3-512 / Keccak-512",
+      "Whirlpool",
+      "BLAKE2b-512"
+    ]
+  },
+  "b64_buckets": {
+    "16": [
+      "MD5 (base64)",
+      "MD4 (base64)"
+    ],
+    "20": [
+      "SHA1 (base64)",
+      "RIPEMD-160 (base64)"
+    ],
+    "28": [
+      "SHA-224 (base64)"
+    ],
+    "32": [
+      "SHA-256 (base64)"
+    ],
+    "48": [
+      "SHA-384 (base64)"
+    ],
+    "64": [
+      "SHA-512 (base64)",
+      "Whirlpool (base64)"
+    ]
+  }
+}
